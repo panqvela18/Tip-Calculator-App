@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;500;700;900&family=Kumbh+Sans:wght@400;700&family=Outfit:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;1,100&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <div class="card">
+            <div class="input-block">
+                <div class="bill-cont">
+                    <div class="label-wrapper">
+                        <label for="bill">Bill</label>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" class="bill-inp" id="bill-input" placeholder="0.0">
+                        <img src="./img/icon-dollar.svg" alt="icon-dollar">
+                    </div>
+                </div>
+                <div class="tip-cont">
+                    <div class="label-wrapper">
+                        <label for="inp-tip">Select Tip %</label>
+                    </div>
+                    <div class="btns">
+                        <button class="btn tip">5%</button>
+                        <button class="btn tip">10%</button>
+                        <button class="btn tip active">15%</button>
+                        <button class="btn tip">25%</button>
+                        <button class="btn tip">50%</button>
+                        <input type="text" class="btn-input" id="btn-input" placeholder="CUSTOM">
+                    </div>
+                </div>
+                <div class="people-cont">
+                    <div class="label-wrapper">
+                        <label for="inp-people">Number of People</label>
+                        <div class="error-msg">Can’t be zero</div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" class="bill-inp" id="people-input" placeholder="0">
+                        <img src="./img/icon-person.svg" alt="icon-person">
+                    </div>
+                </div>
+            </div>
+            <div class="output-block">
+                <div class="output-bg">
+                    <div class="tip-amount-values">
+                        <div class="tip-amount">
+                            <div class="tip-person">
+                                <div class="title">Tip Amount</div>
+                                <div class="desc">/ person</div>
+                            </div>
+                            <div class="value">$4.27</div>
+                        </div>
+                        <div class="tip-amount">
+                            <div class="tip-person">
+                                <div class="title">Total</div>
+                                <div class="desc">/ person</div>
+                            </div>
+                            <div class="value">$32.79</div>
+                    </div>
+                </div>
+                    <button class="btn reset" id="reset">RESET</button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

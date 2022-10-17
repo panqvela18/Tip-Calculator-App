@@ -1,0 +1,231 @@
+/* Color variables */
+
+
+:root{
+    --bg:hsl(185, 41%, 84%);
+    --white:hsl(0, 0%, 100%);
+    --fontColor:#5E7A7D;
+    --inputBg:#F3F9FA;
+    --btn-color:#00474B;
+    --btn-active:#26C2AE;
+    --desc-color:#7F9D9F;
+    --error-msg:#E17457;
+}
+
+/* General style */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--bg);
+    font-family: "Space Mono";
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 40px 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card{
+   
+    background-color: var(--white);
+    padding: 32px 0;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card .input-block{
+    padding: 0 32px;
+    width: 100%;
+
+}
+
+
+/* card input block bill cont div */
+.card .input-block .bill-cont .label-wrapper label{
+    color: var(--fontColor);
+    font-weight: 700;
+    margin-bottom:6px ;
+}
+
+.bill-inp,.btn-input{
+    border: none;
+    width: 100%;
+    background-color: var(--inputBg);
+    height: 48px;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 6px 17px;
+    border-radius: 5px;
+    outline: none;
+    color: var(--btn-color);
+} 
+
+.input-wrapper{
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.input-wrapper img{
+    position: absolute;
+    left: 19px;
+    top: 16px;
+}
+/* card input block tip cont div */
+.card .input-block .tip-cont .label-wrapper{
+    margin-bottom: 16px;
+}
+.card .input-block .tip-cont .label-wrapper label{
+    color: var(--fontColor);
+}
+
+/* BTNs */
+.card .input-block .tip-cont .btns{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    margin-bottom: 32px;
+}
+
+.card .input-block .tip-cont .btns .btn{
+    width: 46%;
+    height: 48px;
+    border: none;
+    background-color: var(--btn-color);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.card .input-block .tip-cont .btns .btn.active{
+    background-color:var(--btn-active);
+    color: #00474B;
+}
+.card .input-block .tip-cont .btns .btn-input {
+    width: 46%;
+    height: 48px;
+}
+
+
+
+/* card input block people cont  */
+.card .input-block .people-cont .label-wrapper label{
+    color: var(--fontColor);
+
+}
+.card .input-block .people-cont .label-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.card .input-block .people-cont .label-wrapper .error-msg{
+    color: var(--error-msg);
+    opacity: 0;
+}
+
+.card .input-block .people-cont .label-wrapper .show-error-msg{
+    transition: 1s ease-in-out ;
+    opacity: 1;
+}
+/* Output Style */
+
+.output-block{
+    padding: 24px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.output-block .output-bg{
+    background-color: #00474B;
+    padding: 24px;
+    border-radius: 15px;
+}
+
+.output-block .output-bg .tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+   
+
+}
+
+.title{
+    color: var(--white);
+}
+
+.desc{
+    color: var(--desc-color);
+    font-size: 12px;
+}
+
+.value{
+    color: var(--btn-active);
+    font-size: 32px;
+}
+
+.reset{
+    width: 100%;
+    height: 48px;
+    background-color: var(--btn-active);
+    color: var(--btn-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Desktop Version */ 
+
+@media (min-width:1200px){
+    .card{
+        width: 65%;
+        border-radius: 25px;
+    }
+    .card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card .input-block{
+        width: 100%;
+    }
+    .card .output-bg{
+        height: 50vh;
+    }
+    .card .input-block .tip-cont .btns .btn{
+        width: 30%;
+        
+    }
+    .card .input-block .tip-cont .btns .btn-input{
+        width: 30%;
+        font-size: 16px;
+    }
+
+    .card .input-block .tip-cont .btns{
+        gap: 17px;
+    }
+
+    .card .output-block .output-bg{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
